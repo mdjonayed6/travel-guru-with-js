@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guru | Your Travel Partner</title>
+    <!-- Favicon here  -->
+    <link rel="shortcut icon" href="images/icon.jpg" type="image/x-icon">
+    <!-- Customs CSS  -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Tailwind & DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-poppins py-2 px-10">
+    <header>
+        <section>
+            <div>
+                <div class="navbar bg-base-100">
+                    <div class="navbar-start">
+                        <div class="dropdown">
+                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                                <li><a>Home</a></li>
+                                <li><a>Settings</a></li>
+                            </ul>
+                        </div>
+                        <a href="#">
+                            <img src="images/logo-2.webp" alt="" class="w-28 h-28">
+                        </a>
+                    </div>
+                    <div class="navbar-center hidden lg:flex">
+                        <ul class="menu menu-horizontal gap-10">
+                            <li><a><img class="w-10" src="images/cart.png" alt=""><span id="cart-count"
+                                        class="text-xl font-anton text-red-600"><sup>0</sup></span>Home</a>
+                            </li>
+                            <li><a>Settings</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-end">
+                        <!-- <a class="btn">Button</a> -->
+
+                        <div class="flex gap-2">
+                            <div class="form-control">
+                                <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+                            </div>
+                            <div class="dropdown dropdown-end">
+                                <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar border-blue-500">
+                                    <div class="w-24 rounded-full">
+                                        <img alt="User Image" src="images/selfPic.png" />
+                                    </div>
+                                </div>
+                                <ul tabindex="0"
+                                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                                    <li>
+                                        <a class="justify-between">
+                                            Profile
+                                        </a>
+                                    </li>
+                                    <li><a>Settings</a></li>
+                                    <li><a>Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+        <!-- Banner Design  -->
+        <section>
+            <div class="banner-container flex items-center gap-x-64">
+                <div class="w-[40%]">
+                    <h1 class="text-6xl font-semibold">Let's Travel</h1>
+                    <p class="text-justify pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sed in
+                        necessitatibus? Magni
+                        fugiat nostrum quisquam inventore, culpa impedit blanditiis repellat animi ex dolorem sit
+                        temporibus laborum fuga deserunt.</p>
+                    <strong class="font-semibold">Total Budget: <span>900</span>$</strong>
+                </div>
+                <div class="lg:w-[40rem]">
+                    <img src="images/man-siting.avif" alt="">
+                </div>
+            </div>
+        </section>
+    </header>
+
+
+    <main>
+        <section class="py-20">
+            <div class="flex w-full gap-16">
+                <!-- places added here  -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 h-full w-[65%] gap-8">
+                    <!-- cart-1  -->
+                    <div class=" card-side shadow-xl items-center p-4 flex border-2">
+                        <figure>
+                            <img class="w-80" src="images/sajek-2.png" alt="Movie" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Sajek Valley</h2>
+                            <strong>300$</strong>
+                            <div class="card-actions justify-center">
+                                <button class="btn btn-active btn-ghost add-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cart-2  -->
+                    <div class=" card-side shadow-xl items-center p-4 flex border-2">
+                        <figure>
+                            <img class="" src="images/Rectangle 1.png" alt="Movie" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Nepal</h2>
+                            <strong>400$</strong>
+                            <div class="card-actions justify-center">
+                                <button class="btn btn-active btn-ghost add-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cart-3  -->
+                    <div class=" card-side shadow-xl items-center p-4 flex border-2">
+                        <figure>
+                            <img class="" src="images/Rectangle 26.png" alt="Movie" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Dhaka</h2>
+                            <strong>100$</strong>
+                            <div class="card-actions justify-center">
+                                <button class="btn btn-active btn-ghost add-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cart-4  -->
+                    <div class=" card-side shadow-xl items-center p-4 flex border-2">
+                        <figure>
+                            <img class="" src="images/coxsBazar.jpg" alt="Movie" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Cox's Bazar</h2>
+                            <strong>200$</strong>
+                            <div class="card-actions justify-center">
+                                <button class="btn btn-active btn-ghost add-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cart-5  -->
+                    <div class=" card-side shadow-xl items-center p-4 flex border-2">
+                        <figure>
+                            <img class="" src="images/Rectangle 28.png" alt="Movie" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Thailand</h2>
+                            <strong>300$</strong>
+                            <div class="card-actions justify-center">
+                                <button class="btn btn-active btn-ghost add-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- cart total amount  -->
+                <div class=" card-side shadow-xl items-center justify-end p-4 flex border-2">
+                    <div class="card-body text-center">
+                        <h2 class="text-2xl font-semibold text-center">Your Budget Cost</h2>
+                        <hr>
+                        <strong class="">Total Cost: 0 $</strong>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <button class="btn btn-active btn-ghost">Bus +100$</button>
+                            <button class="btn btn-active btn-ghost">Train -200$</button>
+                            <button class="btn btn-active btn-ghost">Flight +500$</button>
+                        </div>
+                        <hr>
+                        <strong class="">Grand Total: 0 $</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="script/app.js"></script>
+</body>
+
+</html>
