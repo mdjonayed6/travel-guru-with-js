@@ -40,6 +40,7 @@
                     </div>
                     <div class="navbar-center hidden lg:flex">
                         <ul class="menu menu-horizontal gap-10">
+                            <!-- CART COUNT  -->
                             <li><a><img class="w-10" src="images/cart.png" alt=""><span id="cart-count"
                                         class="text-xl font-anton text-red-600"><sup>0</sup></span>Home</a>
                             </li>
@@ -104,7 +105,7 @@
                         </figure>
                         <div class="card-body">
                             <h2 class="card-title">Sajek Valley</h2>
-                            <strong>300$</strong>
+                            <h4 class="text-xl font-semibold"><span>300</span> $</h4>
                             <div class="card-actions justify-center">
                                 <button class="btn btn-active btn-ghost add-btn">Add to Cart</button>
                             </div>
@@ -117,7 +118,7 @@
                         </figure>
                         <div class="card-body">
                             <h2 class="card-title">Nepal</h2>
-                            <strong>400$</strong>
+                            <h4 class="text-xl font-semibold"><span>400</span> $</h4>
                             <div class="card-actions justify-center">
                                 <button class="btn btn-active btn-ghost add-btn">Add to Cart</button>
                             </div>
@@ -126,11 +127,11 @@
                     <!-- cart-3  -->
                     <div class=" card-side shadow-xl items-center p-4 flex border-2">
                         <figure>
-                            <img class="" src="images/Rectangle 26.png" alt="Movie" />
+                            <img class="" src="images/Rectangle 28.png" alt="Movie" />
                         </figure>
                         <div class="card-body">
                             <h2 class="card-title">Dhaka</h2>
-                            <strong>100$</strong>
+                            <h4 class="text-xl font-semibold"><span>100</span> $</h4>
                             <div class="card-actions justify-center">
                                 <button class="btn btn-active btn-ghost add-btn">Add to Cart</button>
                             </div>
@@ -143,20 +144,7 @@
                         </figure>
                         <div class="card-body">
                             <h2 class="card-title">Cox's Bazar</h2>
-                            <strong>200$</strong>
-                            <div class="card-actions justify-center">
-                                <button class="btn btn-active btn-ghost add-btn">Add to Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- cart-5  -->
-                    <div class=" card-side shadow-xl items-center p-4 flex border-2">
-                        <figure>
-                            <img class="" src="images/Rectangle 28.png" alt="Movie" />
-                        </figure>
-                        <div class="card-body">
-                            <h2 class="card-title">Thailand</h2>
-                            <strong>300$</strong>
+                            <h4 class="text-xl font-semibold"><span>200</span> $</h4>
                             <div class="card-actions justify-center">
                                 <button class="btn btn-active btn-ghost add-btn">Add to Cart</button>
                             </div>
@@ -164,18 +152,22 @@
                     </div>
                 </div>
                 <!-- cart total amount  -->
-                <div class=" card-side shadow-xl items-center justify-end p-4 flex border-2">
+                <div class=" card-side shadow-xl items-center justify-start p-4 flex border-2">
                     <div class="card-body text-center">
                         <h2 class="text-2xl font-semibold text-center">Your Budget Cost</h2>
-                        <hr>
-                        <strong class="">Total Cost: 0 $</strong>
+                        <hr />
+                        <ul id="selected-place-container" class="selected-place-container">
+
+                        </ul>
+                        <hr />
+                        <h4 class="text-xl font-semibold">Total Cost: <span id="totalCost">0</span> $</h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             <button class="btn btn-active btn-ghost">Bus +100$</button>
                             <button class="btn btn-active btn-ghost">Train -200$</button>
                             <button class="btn btn-active btn-ghost">Flight +500$</button>
                         </div>
                         <hr>
-                        <strong class="">Grand Total: 0 $</strong>
+                        <h4 class="text-xl font-semibold font-anton">Grand Total: <span id="grand-total">0</span> $</h4>
                     </div>
                 </div>
             </div>

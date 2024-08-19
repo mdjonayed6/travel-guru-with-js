@@ -13,3 +13,9 @@
 .banner-container{
     margin-top: 4rem;
 }
+li{
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    list-style: numeric;
+}
