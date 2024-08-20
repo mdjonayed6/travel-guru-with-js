@@ -162,9 +162,11 @@
                         <hr />
                         <h4 class="text-xl font-semibold">Total Cost: <span id="totalCost">0</span> $</h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <button class="btn btn-active btn-ghost">Bus +100$</button>
-                            <button class="btn btn-active btn-ghost">Train -200$</button>
-                            <button class="btn btn-active btn-ghost">Flight +500$</button>
+                            <button onclick="grandTotalCost('bus')" class="btn btn-active btn-ghost">Bus +100$</button>
+                            <button onclick="grandTotalCost('train')" class="btn btn-active btn-ghost">Train
+                                -200$</button>
+                            <button onclick="grandTotalCost('flight')" class="btn btn-active btn-ghost">Flight
+                                +500$</button>
                         </div>
                         <hr>
                         <h4 class="text-xl font-semibold font-anton">Grand Total: <span id="grand-total">0</span> $</h4>

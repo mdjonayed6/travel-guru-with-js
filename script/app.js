@@ -20,21 +20,47 @@ for (const btn of allBtn) {
     li.appendChild(amount);
     selectedContainer.appendChild(li);
 
+    totalCost("totalCost", parseInt(price));
+    grandTotalCost("grand-total", parseInt(price));
+
     // Total cost calculation
-    const totalCost = document.getElementById("totalCost").innerText;
-    const convertedTotalCost = parseInt(totalCost);
-    const tourCost = convertedTotalCost + parseInt(price);
+    // -----------------------------------
+    // const totalCost = document.getElementById("totalCost").innerText;
+    // const convertedTotalCost = parseInt(totalCost);
+    // const tourCost = convertedTotalCost + parseInt(price);
 
     // grand total calculation
-    const grandTotalCost = document.getElementById("grand-total").innerText;
-    const convertedGrandTotalCost = parseInt(grandTotalCost);
-    const grandTourCost = convertedGrandTotalCost + parseInt(price);
+    // --------------------------------------
+    // const grandTotalCost = document.getElementById("grand-total").innerText;
+    // const convertedGrandTotalCost = parseInt(grandTotalCost);
+    // const grandTourCost = convertedGrandTotalCost + parseInt(price);
 
     // Display Output
+
     setInnerText("cart-count", count);
-    setInnerText("totalCost", tourCost);
-    setInnerText("grand-total", grandTourCost);
   });
+}
+// Total cost functionality
+function totalCost(elementId, value) {
+  const totalCost = document.getElementById(elementId).innerText;
+  const convertedTotalCost = parseInt(totalCost);
+  const tourCost = convertedTotalCost + parseInt(value);
+  setInnerText(elementId, tourCost);
+}
+// Grand total cost functionality
+function grandTotalCost(category) {
+  const totalCost = document.getElementById("totalCost").innerText;
+  const convertedGrandTotalCost = parseInt(totalCost);
+
+  if (category === "bus") {
+    setInnerText("grand-total", convertedGrandTotalCost + 100);
+  } else if (category === "train") {
+    setInnerText("grand-total", convertedGrandTotalCost - 200);
+  } else if (category === "flight") {
+    setInnerText("grand-total", convertedGrandTotalCost + 500);
+  } else {
+    setInnerText("grand-total", convertedGrandTotalCost);
+  }
 }
 
 function setInnerText(elementId, value) {
