@@ -18,6 +18,21 @@ for (const btn of allBtn) {
 
     li.appendChild(place);
     li.appendChild(amount);
+
+    // remaining budget
+    const budget = document.getElementById("total-budget").innerText;
+    const convertedBudget = parseInt(budget);
+
+    if (convertedBudget - parseInt(price) < 0) {
+      alert(
+        "This trip goes up with your budget. Please increase your budget or select others"
+      );
+      return;
+    }
+    // display remaining budget
+    document.getElementById("total-budget").innerText =
+      convertedBudget - parseInt(price);
+
     selectedContainer.appendChild(li);
 
     totalCost("totalCost", parseInt(price));
