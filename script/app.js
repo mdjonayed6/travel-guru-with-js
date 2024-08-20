@@ -1,8 +1,22 @@
+// let allCardSide = document.getElementsByClassName("card-side");
+// for (const cs of allCardSide) {
+//   cs.addEventListener("click", function (e) {
+//     let isThisDisabled = e.target
+//       .closest(".card-body")
+//       .querySelector(".add-btn").disabled;
+//     e.target.closest(".card-body").querySelector(".add-btn").disabled =
+//       !isThisDisabled;
+//     e.target.closest(".card-body").closest(".card-side").style.backgroundColor =
+//       !isThisDisabled ? "white" : "gray";
+//   });
+// }
+
 const allBtn = document.getElementsByClassName("add-btn");
 
 let count = 0;
 for (const btn of allBtn) {
   btn.addEventListener("click", function (e) {
+    e.stopPropagation();
     count = count + 1; //count++
     const placeName = e.target.parentNode.parentNode.childNodes[1].innerText;
     const price =
@@ -16,13 +30,15 @@ for (const btn of allBtn) {
     const amount = document.createElement("p");
     amount.innerText = price;
 
-    e.target.parentNode.parentNode.parentNode.style.backgroundColor = "gray";
-    // e.target.setAttribute("disabled", true);
     e.target.disabled = true;
+    e.target.parentNode.parentNode.parentNode.style.backgroundColor = "gray";
+
+    //e.target.parentNode.parentNode.parentNode.style.backgroundColor = "gray";
+    // e.target.setAttribute("disabled", true);
+    //e.target.disabled = true;
 
     li.appendChild(place);
     li.appendChild(amount);
-
     // remaining budget
     const budget = document.getElementById("total-budget").innerText;
     const convertedBudget = parseInt(budget);
@@ -31,6 +47,9 @@ for (const btn of allBtn) {
       alert(
         "This trip goes up above your budget. Please increase your budget or select others"
       );
+
+      e.target.parentNode.parentNode.parentNode.style.backgroundColor = "white";
+      e.target.disabled = false;
       return;
     }
 
@@ -66,6 +85,7 @@ function totalCost(elementId, value) {
   const convertedTotalCost = parseInt(totalCost);
   const tourCost = convertedTotalCost + parseInt(value);
   setInnerText(elementId, tourCost);
+  // console.log("converted cost", convertedTotalCost);
 }
 // Grand total cost functionality
 function grandTotalCost(category) {
