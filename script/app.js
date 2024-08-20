@@ -16,6 +16,10 @@ for (const btn of allBtn) {
     const amount = document.createElement("p");
     amount.innerText = price;
 
+    e.target.parentNode.parentNode.parentNode.style.backgroundColor = "gray";
+    // e.target.setAttribute("disabled", true);
+    e.target.disabled = true;
+
     li.appendChild(place);
     li.appendChild(amount);
 
@@ -25,10 +29,11 @@ for (const btn of allBtn) {
 
     if (convertedBudget - parseInt(price) < 0) {
       alert(
-        "This trip goes up with your budget. Please increase your budget or select others"
+        "This trip goes up above your budget. Please increase your budget or select others"
       );
       return;
     }
+
     // display remaining budget
     document.getElementById("total-budget").innerText =
       convertedBudget - parseInt(price);
